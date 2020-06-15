@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/exchange"
+        android:layout_width="404dp"
+        android:layout_height="54dp"
+        android:text="перевести"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="158dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exchange"
+        app:layout_constraintVertical_bias="0.078">
+
+        <Button
+            android:id="@+id/eur1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Евро" />
+
+        <Button
+            android:id="@+id/d1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="доллар" />
+
+        <Button
+            android:id="@+id/rub1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="рубль" />
+
+        <Button
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Тенге" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="158dp"
+        android:layout_height="222dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/exchange"
+        app:layout_constraintVertical_bias="0.067">
+
+        <Button
+            android:id="@+id/eur2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="евро" />
+
+        <Button
+            android:id="@+id/d2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="доллар" />
+
+        <Button
+            android:id="@+id/rub2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="рубль" />
+
+        <Button
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="тенге" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/cash"
+        android:layout_width="223dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textSize="25dp"
+        android:digits="0123456789."
+        app:layout_constraintBottom_toTopOf="@+id/exchange"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="106dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="12dp"
+        android:text="0"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/exchange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cash" />
+
+    <TextView
+        android:id="@+id/val1"
+        android:layout_width="146dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="4dp"
+        android:text="Pубль:"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/val2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/val2"
+        android:layout_width="137dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="4dp"
+        android:text="Доллар:"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/val1"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
